@@ -12,6 +12,10 @@ public class CampaignService {
         this.campaignRepository = campaignRepository;
     }
 
+    public Campaign findById(Long Id) {
+        return campaignRepository.findById(Id).orElse(null);
+    }
+
     public Campaign createCampaign(Campaign campaign) {
         return campaignRepository.save(campaign);
     }

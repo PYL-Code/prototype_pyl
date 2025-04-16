@@ -12,7 +12,7 @@
       신청한 체험단이 없습니다.
     </div>
 
-    <div v-else class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div v-else class="row row-cols-1 g-4">
       <div class="col" v-for="app in applications" :key="app.id">
         <div class="card h-100 shadow-sm border-0">
           <div class="card-body">
@@ -89,8 +89,13 @@ onMounted(fetchApplications)
 <style scoped>
 .card {
   border-radius: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 명시적으로 그림자 추가 */
+  background-color: #ffffff; /* 배경색 명시 */
 }
 .card-footer {
   border-top: none;
+  background-color: #f8f9fa
 }
 </style>
