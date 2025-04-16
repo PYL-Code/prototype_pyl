@@ -6,7 +6,6 @@ import edu.du.prototype_pyl.service.ApplicationService;
 import edu.du.prototype_pyl.service.CampaignService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -31,16 +30,15 @@ public class ProviderRestController {
     }
 
     //체험단이 체험할 서비스 업로드
-    @PostMapping("/upload/{id}")
-    public ResponseEntity<String> uploadCampaign(@PathVariable long id, Campaign campaign) {
-        campaign.setId(id);
+    @PostMapping("/upload")
+    public ResponseEntity<String> uploadCampaign(Campaign campaign) {
         campaignService.createCampaign(campaign);
         return ResponseEntity.ok("업로드 되었습니다.");
     }
 
     //서비스 삭제 (기간 만료/제공 취소 등)
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteCampaign(@PathVariable long id) {
+    public ResponseEntity<String> deleteCampaign(@PathVariable Long id) {
         campaignService.deleteCampaign(id);
         applicationService.deleteByCampaignId(id);
         return ResponseEntity.ok("삭제되었습니다.");

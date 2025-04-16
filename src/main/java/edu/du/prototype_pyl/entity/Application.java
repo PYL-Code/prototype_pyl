@@ -23,6 +23,9 @@ public class Application {
     private Long reviewerId;
 
     @Column(nullable = false)
+    private String campaignTitle;
+
+    @Column(nullable = false)
     private String reviewerNickname;
 
     @Column(nullable = false)

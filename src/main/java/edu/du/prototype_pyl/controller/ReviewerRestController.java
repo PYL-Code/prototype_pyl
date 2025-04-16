@@ -17,19 +17,27 @@ public class ReviewerRestController {
         this.applicationService = applicationService;
     }
 
+    //마이페이지------
     //체험단 서비스 체험자가 신청한 서비스 목록 확인
-    @GetMapping("/myapplication")
-    public ResponseEntity<List<Application>> getMyApplication() {
-        Long id = 1l;
+    @GetMapping("/myapplication/{id}")
+    public ResponseEntity<List<Application>> getMyApplication(@PathVariable Long id) {
         List<Application> application = applicationService.findByReviewerId(id);
         return ResponseEntity.ok(application);
     }
 
+    //체험단 서비스 체험자가 신청 내용 삭제
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteApplication(@PathVariable Long id) {
+        applicationService.deleteById(id);
+        return ResponseEntity.ok("삭제 완료되었습니다.");
+    }
+
+    //체험단 신청------
     //체험단 서비스 체험자가 서비스 신청
     @PostMapping("/upload/{id}")
-    public ResponseEntity<String> uploadApplication(@PathVariable long id, Application application) {
+    public ResponseEntity<String> uploadApplication(@PathVariable Long id, Application application) {
         application.setId(id);
         applicationService.save(application);
-        return ResponseEntity.ok("신청 완료 되었습니다.");
+        return ResponseEntity.ok("신청 완료되었습니다.");
     }
 }
