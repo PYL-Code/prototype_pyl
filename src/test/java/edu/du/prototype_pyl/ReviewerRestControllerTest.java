@@ -72,7 +72,7 @@ public class ReviewerRestControllerTest {
     public void testUploadApplication() throws Exception {
         Mockito.doNothing().when(applicationService).save(any(Application.class));
 
-        mockMvc.perform(post("/reviewer/upload/1")
+        mockMvc.perform(post("/reviewer/upload")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(mockApp)))
                 .andExpect(status().isOk())

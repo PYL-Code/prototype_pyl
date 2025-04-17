@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import MyPage from "../views/MyPage.vue";
 import ApplicationForm from "../views/ApplicationForm.vue";
 import CampaignDetail from "../views/CampaignDetail.vue";
+import CampaignList from "../views/CampaignList.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,6 +22,11 @@ const router = createRouter({
             path: '/applyform/:id',
             name: 'applyform',
             component: ApplicationForm
+        },
+        {
+            path: '/list',
+            name: 'list',
+            component: CampaignList
         },
         {
             path: '/detail/:id',

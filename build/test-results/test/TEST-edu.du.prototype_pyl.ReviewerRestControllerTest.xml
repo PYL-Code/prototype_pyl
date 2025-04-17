@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.du.prototype_pyl.ReviewerRestControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-17T06:09:34.953Z" hostname="DESKTOP-2AMRE7T" time="0.266">
+  <properties/>
+  <testcase name="testUploadApplication()" classname="edu.du.prototype_pyl.ReviewerRestControllerTest" time="0.266"/>
+  <system-out><![CDATA[15:09:33.071 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [edu.du.prototype_pyl.ReviewerRestControllerTest]: ReviewerRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:09:33.163 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration edu.du.prototype_pyl.PrototypePylApplication for test class edu.du.prototype_pyl.ReviewerRestControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.4)
+
+2025-04-17T15:09:33.401+09:00  INFO 9204 --- [prototype_pyl] [    Test worker] e.d.p.ReviewerRestControllerTest         : Starting ReviewerRestControllerTest using Java 17.0.12 with PID 9204 (started by DU in C:\PYL\WebProjects\prototype_pyl)
+2025-04-17T15:09:33.402+09:00  INFO 9204 --- [prototype_pyl] [    Test worker] e.d.p.ReviewerRestControllerTest         : No active profile set, falling back to 1 default profile: "default"
+2025-04-17T15:09:34.884+09:00  INFO 9204 --- [prototype_pyl] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-04-17T15:09:34.884+09:00  INFO 9204 --- [prototype_pyl] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-04-17T15:09:34.888+09:00  INFO 9204 --- [prototype_pyl] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-04-17T15:09:34.940+09:00  INFO 9204 --- [prototype_pyl] [    Test worker] e.d.p.ReviewerRestControllerTest         : Started ReviewerRestControllerTest in 1.731 seconds (process running for 2.424)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

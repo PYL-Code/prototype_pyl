@@ -34,9 +34,8 @@ public class ReviewerRestController {
 
     //체험단 신청------
     //체험단 서비스 체험자가 서비스 신청
-    @PostMapping("/upload/{id}")
-    public ResponseEntity<String> uploadApplication(@PathVariable Long id, Application application) {
-        application.setId(id);
+    @PostMapping("/upload")
+    public ResponseEntity<String> uploadApplication(@RequestBody Application application) {
         applicationService.save(application);
         return ResponseEntity.ok("신청 완료되었습니다.");
     }

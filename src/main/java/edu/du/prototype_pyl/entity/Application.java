@@ -31,7 +31,7 @@ public class Application {
     @Column(nullable = false)
     private String phone;
 
-    @Column
+    @Column(nullable = false)
     private String snsUrl;
 
     @Column(nullable = false)

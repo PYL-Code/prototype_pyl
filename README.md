@@ -1,5 +1,27 @@
-# Vue 3 + Vite
+# 프로토타입 코딩 현황
+## 맡은 부분 : 사용자 서비스 (체험단 신청)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### 구현해야 할 기능
+- 체험단 신청 폼
+- 마이페이지
+  - 신청한 체험단 캠페인(서비스) 목록 보기
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+### 구현된 페이지 view
+- 체험단 캠페인(서비스) 목록
+- 체험단 캠페인 상세 페이지
+- 체험단 신청 폼
+- 신청한 체험단 캠페인 목록 페이지 (마이 페이지)
+
+### 참고사항/발생문제
+- 로그인 사용자의 정보를 불러오는 부분을 임의 데이터로 처리
+- 사진 부분은 전부 동일한 사진을 이미지 주소로 처리
+- 체험단 신청 목록에서 삭제 기능 존재하는데, 현재 삭제 버튼 클릭시 삭제 처리 됨. 바로 삭제되는 것에 대해 의문점 있음. 취소를 할 경우 취소 처리에 대한 고민 필요할 듯.
+- 신청한 캠페인의 상태 변경에 대한 구현 추후 필요할 수도. 논의 필요할 듯.
+
+### 추가적으로 구현할 기능?
+- 마이페이지 세부 기능
+    - 초기 화면 : 내 정보 표시 및 수정
+    - 신청 목록 : 사용자가 신청한 체험단 확인 및 취소, 체험 완료 후 리뷰 작성 버튼
+    - 리뷰 목록 : 사용자가 작성한 리뷰 확인 및 수정
+    - 사업체 등록 목록 : 사용자가 등록한 사업체 확인
+    - 회원 탈퇴 : 회원 탈퇴 기능

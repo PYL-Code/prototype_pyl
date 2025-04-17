@@ -23,6 +23,12 @@ public class ProviderRestController {
         this.campaignService = campaignService;
     }
 
+    @GetMapping("campaign/list")
+    public ResponseEntity<List<Campaign>> getAllCampaigns() {
+        List<Campaign> campaigns = campaignService.findAll();
+        return new ResponseEntity<>(campaigns, HttpStatus.OK);
+    }
+
     //서비스 상세 페이지
     @GetMapping("/campaign/{id}")
     public ResponseEntity<Campaign> findById(@PathVariable Long id) {

@@ -7,12 +7,17 @@ export default defineConfig({
   server: {
     port: 5173, // 프론트 포트
     proxy: {
-      '/reviewer': {
+      '^/reviewer': {
         target: 'http://localhost:9876',
         changeOrigin: true,
         secure: false,
       },
-      '/campaign': {
+      '^/campaign': {
+        target: 'http://localhost:9876',
+        changeOrigin: true,
+        secure: false,
+      },
+      '^/provider': {
         target: 'http://localhost:9876',
         changeOrigin: true,
         secure: false,
